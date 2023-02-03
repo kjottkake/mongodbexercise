@@ -11,13 +11,39 @@ mongoose.connect('mongodb://localhost/imageGallery', {
 
 
 const ItemSchema = new mongoose.Schema({
-    url: String,
+    url: String
 });
 
-const Item = mongoose.model('Item', ItemSchema);
+
+const Item = mongoose.model('images', ItemSchema);
+
+const personSchema = new mongoose.Schema({
+    name: String,
+    age: Number
+})
+
+const Person = mongoose.model("Person", personSchema)
+
+const person = new Person({
+    name: "John",
+    age: 37
+})
+
+person.save();
+
+
 
 //set view engine to ejs
 app.set('view engine', 'ejs');
+
+
+Item.find(function(err, items){
+    if(err){
+        console.log(err);
+    } else {
+        console.log(items);
+    }
+});
 
 
 app.get('/', async (req, res) => {
