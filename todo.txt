@@ -1,0 +1,14 @@
+TODO:
+    0.[x]Install homebrew
+    1.[x]Install MongoDB
+        1.1.[x]Install mongo shell 
+
+    2.[]Install Dependences
+        [x]express
+        [x]ejs
+        [x]mongoose
+        2.1 [x]Populate Database with Data 
+
+    3.[]Add and render index page
+        []add index page
+        []render index page

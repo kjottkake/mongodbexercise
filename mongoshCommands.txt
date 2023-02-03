@@ -1,0 +1,10 @@
+```use [databasename]```
+Switch to a database 
+
+```show collections```
+Shows all collections or "tables"
+
+```db.images.insertOne({x : 1})```
+creates a collection called images and inserts a value into collections called x
+
+
